@@ -9,7 +9,7 @@ public:
         vector<int>ans;
         int i=0;
         int j=0;
-        int las=-1;
+        int y=-1;
         while(i<n && j<m){
             if(nums1[i]<nums2[j]){
                 i++;
@@ -18,9 +18,9 @@ public:
                 j++;
             }
             else{
-               if( las!=nums1[i]){   
+               if( y!=nums1[i]){   
             ans.push_back(nums1[i]);
-            las=nums1[i];
+            y=nums1[i];
             }
                 i++;
                 j++;
