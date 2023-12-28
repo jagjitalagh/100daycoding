@@ -1,10 +1,21 @@
 class Solution {
 public:
     int commonFactors(int a, int b) {
-       int n = min(a, b), ans = 0;
-        for(int i=1; i <= n; i++) {
-            if(a % i == 0 and b % i == 0) ans++; 
+      int count=0;
+    if(a<b){
+    for(int i=1;i<=a;i++){
+        if((a%i==0)&&b%i==0){
+            count++;
         }
-        return ans;
+    }       
+} 
+    else{
+        for(int i=1;i<=a;i++){
+        if((a%i==0)&&(b%i==0)){
+            count++;
+        }
+    }       
+    }
+    return count;
     }
 };
