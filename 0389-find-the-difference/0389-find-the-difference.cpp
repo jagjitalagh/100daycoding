@@ -1,9 +1,8 @@
 class Solution {
 public:
     char findTheDifference(string s, string t) {
-       char c = 0;
-        for(char cs : s) c ^= cs;
-        for(char ct : t) c ^= ct;
-        return c; 
+      for(int i=0;i<s.size();i++)
+		t[i+1]+=t[i]-s[i]; 
+      return t[t.size()-1];
     }
 };
